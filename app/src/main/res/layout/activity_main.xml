@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,25 +7,63 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/home_icon"
+        android:layout_gravity="top|start">
+    </ImageButton>
 
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/home_icon"
-            android:layout_gravity="top|left">
-        </ImageButton>
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/setting_icon"
+        android:layout_gravity="top|end">
+    </ImageButton>
 
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/setting_icon"
-            android:layout_gravity="top|right">
-        </ImageButton>
-    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:background="@drawable/logo_background"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:layout_gravity="top|center">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botchat_color"
+                android:text="Chào Human!"
+                android:textSize="32dp"
+                android:padding="5dp"
+                android:layout_gravity="center">
+            </TextView>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botchat_color"
+            android:text="Chào Bot!"
+            android:textSize="32dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            android:layout_gravity="center">
+        </Button>
+    </LinearLayout>
+
+</FrameLayout>
