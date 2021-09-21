@@ -1,9 +1,14 @@
 package com.example.chatbot_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,6 +17,10 @@ public class SettingActivity extends AppCompatActivity {
 
     ImageView backBtn;
     TextView titleActionbar;
+
+    ListPreference languageList;
+
+    private SharedPreferences.OnSharedPreferenceChangeListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +45,12 @@ public class SettingActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.no_animation, R.anim.slide_down);
             }
         });
+
+        if(findViewById(R.id.setting_container) != null) {
+            if(savedInstanceState != null) {
+                return;
+            }
+            getFragmentManager().beginTransaction().add(R.id.setting_container, new SettingsFragment()).commit();
+        }
     }
 }
