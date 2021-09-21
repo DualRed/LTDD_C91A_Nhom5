@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -92,10 +93,12 @@ public class ChatActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(List<ChatModel>... params) {
-            String url = String.format("http://sandbox.api.simsimi.com/request.p?key=%s&lc=en&ft=1.0&text=%s",getString(R.string.simsimi_api),text);
+            //String url = String.format("http://sandbox.api.simsimi.com/request.p?key=%s&lc=en&ft=1.0&text=%s",getString(R.string.simsimi_api),text);
+            String url = String.format("https://api.simsimi.net/v2/?text=%s&lc=vn",text);
             models = params[0];
             HttpDataHandler httpDataHandler = new HttpDataHandler();
             stream = httpDataHandler.GetHTTPData(url);
+            Log.d("debug",stream);
             return stream;
         }
 
@@ -108,7 +111,7 @@ public class ChatActivity extends AppCompatActivity {
                 Toast.makeText(ChatActivity.this, "Không kết nối được với server.", Toast.LENGTH_LONG).show();
             }
             else {
-                ChatModel chatModel = new ChatModel(response.getResponse(),false); // get response from simsimi
+                ChatModel chatModel = new ChatModel(response.getSuccess(),false); // get response from simsimi
                 models.add(chatModel);
                 CustomAdapter adapter = new CustomAdapter(models,getApplicationContext());
                 listView.setAdapter(adapter);

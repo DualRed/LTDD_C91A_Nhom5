@@ -1,5 +1,9 @@
 package com.example.chatbot_app.Helper;
 
+import android.widget.Toast;
+
+import com.example.chatbot_app.ChatActivity;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
