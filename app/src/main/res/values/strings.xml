@@ -9,8 +9,8 @@
     <string name="dark_mode_summary">Dòng này để debug...</string>
 
     <string-array name="pref_bot_language_entries">
-        <item>Vietnamese</item>
-        <item>English</item>
+        <item>Vietnamese (vn)</item>
+        <item>English (en)</item>
     </string-array>
 
     <string-array name="pref_bot_language_value">

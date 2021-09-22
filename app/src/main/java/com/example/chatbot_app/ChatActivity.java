@@ -1,8 +1,11 @@
 package com.example.chatbot_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.ListPreference;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,15 +89,23 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    public String GetBotLang() {
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        String botLang = pref.getString("pref_language","default");
+        Log.d("debug", botLang);
+        return botLang;
+    }
+
     private class SimsimiAPI extends AsyncTask<List<ChatModel>,Void,String> {
         String stream = null;
         List<ChatModel> models;
         String text = editText.getText().toString();
+        String botLang = GetBotLang();
 
         @Override
         protected String doInBackground(List<ChatModel>... params) {
             //String url = String.format("http://sandbox.api.simsimi.com/request.p?key=%s&lc=en&ft=1.0&text=%s",getString(R.string.simsimi_api),text);
-            String url = String.format("https://api.simsimi.net/v2/?text=%s&lc=vn",text);
+            String url = String.format("https://api.simsimi.net/v2/?text=%s&lc=%s",text, botLang);
             models = params[0];
             HttpDataHandler httpDataHandler = new HttpDataHandler();
             stream = httpDataHandler.GetHTTPData(url);
