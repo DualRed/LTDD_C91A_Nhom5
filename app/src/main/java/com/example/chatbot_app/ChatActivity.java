@@ -1,9 +1,11 @@
 package com.example.chatbot_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -92,7 +94,7 @@ public class ChatActivity extends AppCompatActivity {
     public String GetBotLang() {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         String botLang = pref.getString("pref_language","default");
-        Log.d("debug", botLang);
+        Log.d("Language", botLang);
         return botLang;
     }
 
@@ -109,7 +111,7 @@ public class ChatActivity extends AppCompatActivity {
             models = params[0];
             HttpDataHandler httpDataHandler = new HttpDataHandler();
             stream = httpDataHandler.GetHTTPData(url);
-            Log.d("debug",stream);
+            Log.d("api callback",stream);
             return stream;
         }
 
