@@ -7,28 +7,29 @@
 
     <ImageView
         android:id="@+id/bot_img"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@color/teal_700">
+        android:src="@drawable/ic_bot_chat_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        >
     </ImageView>
 
     <com.github.library.bubbleview.BubbleTextView
         android:id="@+id/text_msg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textColor="#FFF"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:layout_toRightOf="@+id/bot_img"
-        app:arrowWidth="8dp"
-        app:arrowHeight="10dp"
-        app:arrowPosition="14dp"
-        app:arrowLocation="left"
+        android:padding="10dp"
+        android:textColor="#FFF"
+        app:angle="8dp"
         app:arrowCenter="true"
-        app:bubbleColor="#7EC0EE"
-        app:angle="8dp">
+        app:arrowHeight="10dp"
+        app:arrowLocation="left"
+        app:arrowPosition="14dp"
+        app:arrowWidth="8dp"
+        app:bubbleColor="#7EC0EE">
 
     </com.github.library.bubbleview.BubbleTextView>
 </RelativeLayout>

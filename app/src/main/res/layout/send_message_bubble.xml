@@ -8,19 +8,19 @@
     <com.github.library.bubbleview.BubbleTextView
         android:id="@+id/text_msg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textColor="@color/black"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
-        app:arrowWidth="8dp"
-        app:arrowHeight="10dp"
-        app:arrowPosition="14dp"
-        app:arrowLocation="right"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:angle="8dp"
         app:arrowCenter="true"
-        app:bubbleColor="@color/teal_700"
-        app:angle="8dp">
+        app:arrowHeight="10dp"
+        app:arrowLocation="right"
+        app:arrowPosition="14dp"
+        app:arrowWidth="8dp"
+        app:bubbleColor="@color/teal_700">
 
     </com.github.library.bubbleview.BubbleTextView>
 </RelativeLayout>

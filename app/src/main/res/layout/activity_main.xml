@@ -30,18 +30,20 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="256dp"
-                android:layout_height="256dp"
-                android:background="@drawable/ic_launcher_foreground"
-                android:layout_gravity="top|center">
-            </ImageView>
+                android:layout_width="190dp"
+                android:layout_height="185dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="top|center"
+                android:background="@drawable/ic_bot"></ImageView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/botchat_color"
+                android:layout_marginTop="50dp"
                 android:text="Chào Human!"
                 android:textSize="32dp"
+                android:fontFamily="@font/montserrat_regular"
                 android:padding="5dp"
                 android:layout_gravity="center">
             </TextView>
@@ -52,8 +54,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/botchat_color"
+            android:layout_marginTop="40dp"
             android:text="Vào chat"
-            android:textSize="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="28dp"
             android:textAllCaps="false"
             android:padding="10dp"
             android:layout_gravity="center">
