@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="colorBackground" format="color"/>
+        <attr name="colorToolbar" format="color"/>
+        <attr name="colorToolbarTitle" format="color"/>
+        <attr name="colorSendButton" format="color"/>
+    </declare-styleable>
+</resources>
