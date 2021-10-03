@@ -22,14 +22,14 @@
         android:layout_marginBottom="10dp"
         android:layout_toRightOf="@+id/bot_img"
         android:padding="10dp"
-        android:textColor="#FFF"
+        android:textColor="@color/receive_bubble_msg"
         app:angle="8dp"
         app:arrowCenter="true"
         app:arrowHeight="10dp"
         app:arrowLocation="left"
         app:arrowPosition="14dp"
         app:arrowWidth="8dp"
-        app:bubbleColor="#7EC0EE">
+        app:bubbleColor="@color/receive_bubble_bg">
 
     </com.github.library.bubbleview.BubbleTextView>
 </RelativeLayout>
