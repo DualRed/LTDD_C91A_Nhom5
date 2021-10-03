@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">chatbot-app</string>
+    <string name="app_name">Chatbot</string>
+    <string name="simsimi_api">duylKJ_CdkMoA_Z.yaVyY3iBSfebaz24c6jCDoDZ</string>
+    <string name="chatbot_lang">vn</string>
+
+    <string name="bot_language_title">Ngôn ngữ Chatbot</string>
+    <string name="bot_language_summary">Ngôn ngữ mặc định: Vietnamese</string>
+    <string name="dark_mode_title">Dark mode</string>
+    <string name="dark_mode_summary">Dòng này để debug...</string>
+
+    <string-array name="pref_bot_language_entries">
+        <item>Vietnamese (vn)</item>
+        <item>English (en)</item>
+    </string-array>
+
+    <string-array name="pref_bot_language_value">
+        <item>vn</item>
+        <item>en</item>
+    </string-array>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

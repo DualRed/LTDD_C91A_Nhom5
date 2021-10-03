@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_01"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageButton
+        android:id="@+id/gitButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/git_icon"
+        android:layout_gravity="top|start">
+    </ImageButton>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:background="@drawable/logo_background"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="185dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="top|center"
+                android:background="@drawable/ic_bot"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botchat_color"
+                android:layout_marginTop="50dp"
+                android:text="Chào Human!"
+                android:textSize="32dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="5dp"
+                android:layout_gravity="center">
+            </TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/goChatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botchat_color"
+            android:layout_marginTop="40dp"
+            android:text="Vào chat"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="28dp"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:layout_gravity="center">
+        </Button>
+    </LinearLayout>
+
+</FrameLayout>
