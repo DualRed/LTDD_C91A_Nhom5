@@ -148,11 +148,11 @@
     <color name="black">#000000</color>
 
     <color name="transparent">#00000000</color>
-    
-    <color name="toolbar_bg">@color/orange</color>
-    <color name="toolbar_title">@color/black</color>
+
+    <color name="toolbar_bg">#242526</color>
+    <color name="toolbar_title">@color/white</color>
     <color name="send_bubble_bg">#0084FF</color>
     <color name="send_bubble_msg">@color/white</color>
-    <color name="receive_bubble_bg">#E4E6EB</color>
-    <color name="receive_bubble_msg">@color/black</color>
+    <color name="receive_bubble_bg">#3E4042</color>
+    <color name="receive_bubble_msg">@color/white</color>
 </resources>

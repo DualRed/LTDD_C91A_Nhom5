@@ -1,6 +1,7 @@
 package com.example.chatbot_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
@@ -106,7 +107,6 @@ public class ChatActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(List<ChatModel>... params) {
-            //String url = String.format("http://sandbox.api.simsimi.com/request.p?key=%s&lc=en&ft=1.0&text=%s",getString(R.string.simsimi_api),text);
             String url = String.format("https://api.simsimi.net/v2/?text=%s&lc=%s",text, botLang);
             models = params[0];
             HttpDataHandler httpDataHandler = new HttpDataHandler();
@@ -129,7 +129,6 @@ public class ChatActivity extends AppCompatActivity {
                 CustomAdapter adapter = new CustomAdapter(models,getApplicationContext());
                 listView.setAdapter(adapter);
             }
-
         }
     }
 }
